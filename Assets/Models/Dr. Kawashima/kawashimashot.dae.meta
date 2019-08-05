@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: aaf023c13f26e7140bdd1e7375d1878b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bone_number
+    100002: EnvironmentAmbientLight
+    100004: //RootNode
+    100006: N01_VIS_O_OBJShape
+    100008: N02_VIS_O_OBJShape
+    100010: N03_VIS_O_OBJShape
+    100012: N04_VIS_O_OBJShape
+    100014: N05_VIS_O_OBJShape
+    100016: N06_VIS_O_OBJShape
+    100018: N07_VIS_O_OBJShape
+    100020: N08_VIS_O_OBJShape
+    100022: N09_VIS_O_OBJShape
+    100024: N10_VIS_O_OBJShape
+    100026: N11_VIS_O_OBJShape
+    100028: N12_VIS_O_OBJShape
+    100030: N13_VIS_O_OBJShape
+    100032: N14_VIS_O_OBJShape
+    100034: N15_VIS_O_OBJShape
+    100036: N16_VIS_O_OBJShape
+    100038: N17_VIS_O_OBJShape
+    100040: N18_VIS_O_OBJShape
+    100042: Number
+    100044: Top
+    400000: bone_number
+    400002: EnvironmentAmbientLight
+    400004: //RootNode
+    400006: N01_VIS_O_OBJShape
+    400008: N02_VIS_O_OBJShape
+    400010: N03_VIS_O_OBJShape
+    400012: N04_VIS_O_OBJShape
+    400014: N05_VIS_O_OBJShape
+    400016: N06_VIS_O_OBJShape
+    400018: N07_VIS_O_OBJShape
+    400020: N08_VIS_O_OBJShape
+    400022: N09_VIS_O_OBJShape
+    400024: N10_VIS_O_OBJShape
+    400026: N11_VIS_O_OBJShape
+    400028: N12_VIS_O_OBJShape
+    400030: N13_VIS_O_OBJShape
+    400032: N14_VIS_O_OBJShape
+    400034: N15_VIS_O_OBJShape
+    400036: N16_VIS_O_OBJShape
+    400038: N17_VIS_O_OBJShape
+    400040: N18_VIS_O_OBJShape
+    400042: Number
+    400044: Top
+    2100000: kawashimashot_number_mt
+    4300000: N01_VIS_O_OBJShape
+    4300002: N02_VIS_O_OBJShape
+    4300004: N03_VIS_O_OBJShape
+    4300006: N04_VIS_O_OBJShape
+    4300008: N05_VIS_O_OBJShape
+    4300010: N06_VIS_O_OBJShape
+    4300012: N07_VIS_O_OBJShape
+    4300014: N08_VIS_O_OBJShape
+    4300016: N09_VIS_O_OBJShape
+    4300018: N10_VIS_O_OBJShape
+    4300020: N11_VIS_O_OBJShape
+    4300022: N12_VIS_O_OBJShape
+    4300024: N13_VIS_O_OBJShape
+    4300026: N14_VIS_O_OBJShape
+    4300028: N15_VIS_O_OBJShape
+    4300030: N16_VIS_O_OBJShape
+    4300032: N17_VIS_O_OBJShape
+    4300034: N18_VIS_O_OBJShape
+    9500000: //RootNode
+    13700000: N01_VIS_O_OBJShape
+    13700002: N02_VIS_O_OBJShape
+    13700004: N03_VIS_O_OBJShape
+    13700006: N04_VIS_O_OBJShape
+    13700008: N05_VIS_O_OBJShape
+    13700010: N06_VIS_O_OBJShape
+    13700012: N07_VIS_O_OBJShape
+    13700014: N08_VIS_O_OBJShape
+    13700016: N09_VIS_O_OBJShape
+    13700018: N10_VIS_O_OBJShape
+    13700020: N11_VIS_O_OBJShape
+    13700022: N12_VIS_O_OBJShape
+    13700024: N13_VIS_O_OBJShape
+    13700026: N14_VIS_O_OBJShape
+    13700028: N15_VIS_O_OBJShape
+    13700030: N16_VIS_O_OBJShape
+    13700032: N17_VIS_O_OBJShape
+    13700034: N18_VIS_O_OBJShape
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
