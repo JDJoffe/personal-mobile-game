@@ -26,9 +26,13 @@ public class Player : MonoBehaviour
         float x = Screen.width / 2;
         float y = Screen.height / 2;
 
-        var gunray = mainCam.ScreenPointToRay(new Vector3(x, y, 0));
-
-        shootTimer += Time.deltaTime;
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.forward, out hit))
+        {
+            Vector3 hitPosition = hit.point;
+            gun.transform.LookAt(hitPosition);
+        }
+            shootTimer += Time.deltaTime;
         if (shootTimer > 1f && canShoot == true && Input.GetKey(KeyCode.Mouse0))
         {
             Rigidbody clone = Instantiate(bulletPrefab, gun.transform.position, gun.transform.rotation);
