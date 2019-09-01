@@ -1611,5 +1611,11 @@ PrefabInstance:
       propertyPath: m_projectionMatrixMode
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2727116453947559604, guid: f54a40b88dc01c84ca4decbc0f035036,
+        type: 3}
+      propertyPath: cursorHidden
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7572408364385277971, guid: f54a40b88dc01c84ca4decbc0f035036, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f54a40b88dc01c84ca4decbc0f035036, type: 3}
