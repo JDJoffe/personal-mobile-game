@@ -32,8 +32,8 @@ public class Player : MonoBehaviour
         //fire a ray at centre of screen
       //  if (Physics.Raycast(transform.position, Vector3.forward, out hit))
       //  {
-           var gunray = mainCam.ScreenPointToRay(Vector3.forward);
-        gun.transform.LookAt(gunray.direction);
+        //   var gunray = mainCam.ScreenPointToRay(Vector3.forward);
+        //gun.transform.LookAt(gunray.direction);
       //  }
 
             shootTimer += Time.deltaTime;
@@ -49,13 +49,16 @@ public class Player : MonoBehaviour
             shootTimer = 0;
         }
         #endregion
+        #region turning
+
+        #endregion
     }
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.blue;
-        var hit = mainCam.ScreenPointToRay(Vector3.forward);
-        Gizmos.DrawRay(hit);
-        Debug.DrawRay(gun.transform.position, Vector3.forward);
+        //Gizmos.color = Color.blue;
+        //var hit = mainCam.ScreenPointToRay(Vector3.forward);
+        //Gizmos.DrawRay(hit);
+        //Debug.DrawRay(gun.transform.position, Vector3.forward);
       
     }
 }
