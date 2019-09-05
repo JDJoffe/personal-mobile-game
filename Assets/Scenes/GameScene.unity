@@ -386,6 +386,7 @@ PrefabInstance:
       objectReference: {fileID: 8400000, guid: bd97c814c2d3a4b499724af31fb489a6, type: 2}
     m_RemovedComponents:
     - {fileID: 8698853964610181036, guid: c53042a52dc74324d818c8b2e4eaff95, type: 3}
+    - {fileID: 8340249261385375682, guid: c53042a52dc74324d818c8b2e4eaff95, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c53042a52dc74324d818c8b2e4eaff95, type: 3}
 --- !u!1 &647138238
 GameObject:
@@ -663,6 +664,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767898164}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &800044822 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3064273708598456777, guid: f54a40b88dc01c84ca4decbc0f035036,
+    type: 3}
+  m_PrefabInstance: {fileID: 9038598901593627646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1076355114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,7 +1561,7 @@ PrefabInstance:
     - target: {fileID: 9038598900750186024, guid: f54a40b88dc01c84ca4decbc0f035036,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9038598900750186024, guid: f54a40b88dc01c84ca4decbc0f035036,
         type: 3}
@@ -1615,6 +1622,21 @@ PrefabInstance:
         type: 3}
       propertyPath: cursorHidden
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716580678072003355, guid: f54a40b88dc01c84ca4decbc0f035036,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 800044822}
+    - target: {fileID: 8716580678072003355, guid: f54a40b88dc01c84ca4decbc0f035036,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716580678072003355, guid: f54a40b88dc01c84ca4decbc0f035036,
+        type: 3}
+      propertyPath: health
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7572408364385277971, guid: f54a40b88dc01c84ca4decbc0f035036, type: 3}
