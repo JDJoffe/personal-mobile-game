@@ -255,6 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8698853964600342596}
+  - component: {fileID: 8340249261385375682}
   m_Layer: 0
   m_Name: kawashima
   m_TagString: Untagged
@@ -283,6 +284,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &8340249261385375682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698853964600829028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295e358c40fbcf045aee2628ffe515ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 9038598900750186024, guid: f54a40b88dc01c84ca4decbc0f035036, type: 3}
 --- !u!1 &8698853964600829030
 GameObject:
   m_ObjectHideFlags: 0
