@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
         if (shootTimer > 1f && canShoot == true && Input.GetKey(KeyCode.Mouse0))
         {
             // instantiate clone at barrel position
-            Vector3 endOfBarrel = new Vector3(0f, 0f, +.4f);
+            Vector3 endOfBarrel = transform.forward * .5f;
             Rigidbody clone = Instantiate(bulletPrefab, barrel.transform.position + endOfBarrel, barrel.transform.rotation);
             //go to centre of screen
             var bulletray = mainCam.ScreenPointToRay(new Vector3(x, y, 0));
