@@ -6,8 +6,9 @@ public class Enemies : MonoBehaviour
 {
     [Header("var")]
     public float enemyHealth = 15;
-    public bool enemyAlive;
+    public bool enemyAlive = true;
     public float attackTimer;
+    public float moveSpeed;
     [Header("GameObjects")]   
     public GameObject enemy;
     public GameObject face1;
@@ -15,7 +16,7 @@ public class Enemies : MonoBehaviour
     public GameObject face3;
     public Rigidbody enemyBullet;
     public Camera enemyCam;
-  
+    public Transform target;
     private void Awake()
     {
         DontDestroyOnLoad(enemy);
@@ -23,25 +24,28 @@ public class Enemies : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      //  target = GameObject.Find("Player").GetComponent<Transform>();
        
-        //Attack();
         enemyCam = GameObject.Find("EnemyCam").GetComponent<Camera>();
     }
   
     // Update is called once per frame
     void Update()
     {
+        //moveSpeed 
+        Vector3.MoveTowards(transform.position, target.position, 1);
+    
         attackTimer += Time.deltaTime;
         if (attackTimer >= 2)
         {
             Attack();
             attackTimer = 0;
         }
-        //if (enemyHealth >= 0)
-        //{
-        // enemyAlive = false;
-        //    Destroy(this.gameObject);
-        //}
+        if (enemyHealth <= 0)
+        {
+            enemyAlive = false;
+            Destroy(this.gameObject);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -53,7 +57,7 @@ public class Enemies : MonoBehaviour
         Invoke("Face2To3", 1f);
         float x = Screen.width / 2;
         float y = Screen.height / 2;
-        Vector3 enemyFace = transform.forward * .5f;
+        Vector3 enemyFace = transform.forward * 4f;
         Rigidbody clone = Instantiate(enemyBullet, enemy.transform.position + enemyFace, enemy.transform.rotation);
         //go to centre of screen
         var bulletray = enemyCam.ScreenPointToRay(new Vector3(x, y, 0));
@@ -62,6 +66,7 @@ public class Enemies : MonoBehaviour
         Destroy(clone.gameObject, 3f);
         Invoke("Face3To1", 1f);
     }
+    // these are my dumb way to do animations
     void Face1To2()
     {
         face1.SetActive(false);
