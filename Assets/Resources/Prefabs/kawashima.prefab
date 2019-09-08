@@ -284,6 +284,7 @@ Transform:
   - {fileID: 8698853964600342592}
   - {fileID: 8698853964600342594}
   - {fileID: 2303138734940795153}
+  - {fileID: 963471516281390058}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -327,7 +328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 15
-  wayPoints: []
+  enemyAlive: 0
+  attackTimer: 0
   enemy: {fileID: 8698853964600829028}
   face1: {fileID: 8698853964600829036}
   face2: {fileID: 8698853964600829038}
@@ -335,7 +337,6 @@ MonoBehaviour:
   enemyBullet: {fileID: 3929663652413095290, guid: 20b10215406302443821317c6ef30665,
     type: 3}
   enemyCam: {fileID: 8338415602634637488}
-  attackTimer: 0
 --- !u!95 &486779716063492661
 Animator:
   serializedVersion: 3
@@ -709,3 +710,72 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.13564098, y: 0.10786544, z: 0.000000014901161}
     m_Extent: {x: 0.1897788, y: 0.13897309, z: 0.19625361}
   m_DirtyAABB: 0
+--- !u!1 &8827926788238028879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 963471516281390058}
+  - component: {fileID: 2705737119922290213}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &963471516281390058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8827926788238028879}
+  m_LocalRotation: {x: 0.9612794, y: -0, z: -0, w: 0.27557576}
+  m_LocalPosition: {x: 0, y: 0.358, z: 0.194}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8698853964600342596}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 148.007, y: -0.000015258789, z: -0.000015258789}
+--- !u!108 &2705737119922290213
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8827926788238028879}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 0.7924528, g: 0.38501248, b: 0.38501248, a: 1}
+  m_Intensity: 6.21
+  m_Range: 7.53
+  m_SpotAngle: 51
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0

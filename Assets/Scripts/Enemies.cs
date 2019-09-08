@@ -6,15 +6,16 @@ public class Enemies : MonoBehaviour
 {
     [Header("var")]
     public float enemyHealth = 15;
-    [Header("GameObjects")]
-    public GameObject[] wayPoints;
+    public bool enemyAlive;
+    public float attackTimer;
+    [Header("GameObjects")]   
     public GameObject enemy;
     public GameObject face1;
     public GameObject face2;
     public GameObject face3;
     public Rigidbody enemyBullet;
     public Camera enemyCam;
-    public float attackTimer;
+  
     private void Awake()
     {
         DontDestroyOnLoad(enemy);
@@ -38,6 +39,7 @@ public class Enemies : MonoBehaviour
         }
         //if (enemyHealth >= 0)
         //{
+        // enemyAlive = false;
         //    Destroy(this.gameObject);
         //}
     }
