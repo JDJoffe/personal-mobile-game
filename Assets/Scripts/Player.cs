@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float shootTimer;
     public float health;
     public float moveSpeed = 2f;
+    Vector2 screen;
     [Header("Objects")]
     public Camera mainCam;
     public GameObject barrel;
@@ -46,10 +47,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.Android)
-        {
-
-        }
+       
         #endregion
         #region gun
         float x = Screen.width / 2;
@@ -89,5 +87,18 @@ public class Player : MonoBehaviour
         //Gizmos.DrawRay(hit);
         //Debug.DrawRay(gun.transform.position, Vector3.forward);
 
+    }
+
+    private void OnGUI()
+    {
+        screen.x = Screen.width;
+        screen.y = Screen.height;
+        if (!Application.isMobilePlatform)
+        {
+            if (GUI.Button(new Rect(4f * screen.x, .5f * screen.y, 3f * screen.x, .275f * screen.y),""))
+            {
+
+            }
+        }
     }
 }
