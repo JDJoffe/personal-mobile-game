@@ -7,6 +7,10 @@ public class LookAt : MonoBehaviour
     public Transform target;
         private void LateUpdate()
     {
-        transform.rotation = Quaternion.LookRotation(target.forward);
+        if (target != null)
+        {
+            transform.rotation = Quaternion.LookRotation(target.forward);
+        }
+        
     }
 }
