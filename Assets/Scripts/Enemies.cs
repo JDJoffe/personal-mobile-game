@@ -6,8 +6,8 @@ public class Enemies : MonoBehaviour
 {
     [Header("var")]
     public float enemyHealth = 15;
-   
-    public float moveSpeed;
+   public int deathcounter = 0;
+    public float moveSpeed = 5;
     float distance;
     [Header("GameObjects")]   
     public GameObject enemy;
@@ -26,13 +26,16 @@ public class Enemies : MonoBehaviour
     {
         target = GameObject.Find("Player").GetComponent<Transform>();      
         enemyCam = GameObject.Find("EnemyCam").GetComponent<Camera>();
+        int i = Random.Range(0, 4);
+        transform.position = spawnPoints[i].position;
     }
   
     // Update is called once per frame
     void Update()
     {
+        transform.LookAt(target);
         //moveSpeed 
-        Vector3.MoveTowards(transform.position, target.position, 1);
+        Vector3.MoveTowards(transform.position, target.position, moveSpeed + deathcounter);
         distance = Vector3.Distance(transform.position, target.position);
         if (distance > 20 && distance < 30)
         {
@@ -51,6 +54,7 @@ public class Enemies : MonoBehaviour
           int i =  Random.Range(0, 4);
             transform.position =spawnPoints[i].position;
             enemyHealth = 15;
+            ++deathcounter;
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -31,13 +31,14 @@ public class CameraLook : MonoBehaviour
     {
         // rotate the camer based on mouse positon
         transform.Rotate(euler.y += Input.GetAxis("Mouse X"), euler.x -= Input.GetAxis("Mouse Y"), 0);
-
+        
 
         // smoother cam
         euler.x = Mathf.Clamp(euler.x, minPitch, maxPitch);
         // rotate player , camera
         transform.parent.localEulerAngles = new Vector3(0, euler.y, 0);
         transform.localEulerAngles = new Vector3(euler.x, 0, 0);
+        
     }
     #endregion
 }

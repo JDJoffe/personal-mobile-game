@@ -43,11 +43,6 @@ public class Player : MonoBehaviour
                 gunPC();
             }
         }
-       
-        
-        
-        
-
     }
     #region movement
     private void MovePC()
@@ -59,10 +54,7 @@ public class Player : MonoBehaviour
             moveSpeed *= 2;
         }
         else { moveSpeed = 3f; }
-        if (!player.isGrounded)
-        {
-            moveDir.y -= 9.18f * Time.deltaTime;
-        }
+        moveDir = transform.TransformDirection(moveDir);
         player.Move(moveDir * Time.deltaTime);
 
     }
@@ -93,7 +85,6 @@ public class Player : MonoBehaviour
             var bulletray = mainCam.ScreenPointToRay(new Vector3(x, y, 0));
             //clone speed and direction
             clone.velocity = bulletray.direction * 40;
-            Destroy(clone, 3f);
             shootTimer = 0; // put new stuff above here so it actually runs dickhed          
         }
     }
