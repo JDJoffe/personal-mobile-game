@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("Var")]
-    public bool canShoot = true;
     bool isPC;
     public float shootTimer;
     public float health;
@@ -37,8 +36,11 @@ public class Player : MonoBehaviour
         {
             MovePC();
 
-            shootTimer += Time.deltaTime;
-            if (shootTimer > 1f && canShoot == true)
+            if (shootTimer <= .5f)
+            {
+                shootTimer += Time.deltaTime;
+            }
+            if (shootTimer > .5f )
             {
                 gunPC();
             }
@@ -76,7 +78,7 @@ public class Player : MonoBehaviour
 
 
         // fire bullet from gun 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             // instantiate clone at barrel position
             Vector3 endOfBarrel = transform.forward * .5f;
@@ -88,7 +90,7 @@ public class Player : MonoBehaviour
             shootTimer = 0; // put new stuff above here so it actually runs dickhed          
         }
     }
-        
+
 
     #endregion
     private void OnDrawGizmos()
@@ -99,14 +101,20 @@ public class Player : MonoBehaviour
         //Debug.DrawRay(gun.transform.position, Vector3.forward);
 
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            health--;
+        }
+    }
     private void OnGUI()
     {
         screen.x = Screen.width;
         screen.y = Screen.height;
-       
-            GUI.Box(new Rect(4f * screen.x, .5f * screen.y, 3f * screen.x, .275f * screen.y), health.ToString());
-           
-        
+
+        GUI.Box(new Rect(4f * screen.x, .5f * screen.y, 3f * screen.x, .275f * screen.y), health.ToString());
+
+
     }
 }
