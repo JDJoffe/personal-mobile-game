@@ -7,9 +7,11 @@ public class Manager : MonoBehaviour
     public Player player;
     public Enemies enemy;
     public bool cursorHidden = true;
+    public GameObject deadPanel;
     Text health;
     Text round;
     GameObject Mobile;
+    CameraLook cam;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class Manager : MonoBehaviour
         health = GameObject.Find("Health").GetComponent<Text>();
         round = GameObject.Find("Round").GetComponent<Text>();
         Mobile = GameObject.Find("MobileUI");
+        cam = GameObject.Find("Main Camera").GetComponent<CameraLook>();
         if (Application.isMobilePlatform)
         {
             Mobile.SetActive(true);
@@ -48,16 +51,23 @@ public class Manager : MonoBehaviour
             }
         }
         if (player.health <= 0)
-        {
+        {            
+            deadPanel.SetActive(true);
             player.enabled = false;
             enemy.enabled = false;
+            player.gameObject.transform.LookAt(enemy.gameObject.transform);
+            cam.enabled = false;
         }
-        else
-        {
-            player.enabled = true;
-            enemy.enabled = true;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+      
+    }
+    public void Revive()
+    {       
+        deadPanel.SetActive(false);
+        player.enabled = true;
+        enemy.enabled = true;
+        player.health = 10;
+        enemy.deathcounter = 0;
+        cam.enabled = true;
+        enemy.ResetPos();
     }
 }

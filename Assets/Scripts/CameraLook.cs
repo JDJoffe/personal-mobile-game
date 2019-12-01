@@ -6,7 +6,7 @@ public class CameraLook : MonoBehaviour
 {
     #region var
     [Header("Var")]
-    public bool cursorHidden = true;
+   
     public float minPitch = -80f, maxPitch = 80f;
     Vector3 euler;
     #endregion
@@ -14,12 +14,7 @@ public class CameraLook : MonoBehaviour
     #region start
     void Start()
     {
-        if (cursorHidden)
-        {
-            //locks cursor and toggles visible
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        
         euler = transform.eulerAngles;
     }
 

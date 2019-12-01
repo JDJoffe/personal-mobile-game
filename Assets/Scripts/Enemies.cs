@@ -26,8 +26,7 @@ public class Enemies : MonoBehaviour
     {
         target = GameObject.Find("Player").GetComponent<Transform>();
         enemyCam = GameObject.Find("EnemyCam").GetComponent<Camera>();
-        int i = Random.Range(0, 4);
-        transform.position = spawnPoints[i].position;
+        ResetPos();
     }
 
     // Update is called once per frame
@@ -51,8 +50,7 @@ public class Enemies : MonoBehaviour
         }
         if (enemyHealth <= 0)
         {
-            int i = Random.Range(0, 4);
-            transform.position = spawnPoints[i].position;
+            ResetPos();
             enemyHealth = 15;
             ++deathcounter;
         }
@@ -65,8 +63,7 @@ public class Enemies : MonoBehaviour
         }
         if (other.tag == "Player")
         {
-            int i = Random.Range(0, 4);
-            transform.position = spawnPoints[i].position;
+            ResetPos();
         }
     }
 
@@ -91,5 +88,10 @@ public class Enemies : MonoBehaviour
         face2.SetActive(false);
         face3.SetActive(true);
 
+    }
+    public void ResetPos()
+    {
+        int i = Random.Range(0, 4);
+        transform.position = spawnPoints[i].position;
     }
 }
