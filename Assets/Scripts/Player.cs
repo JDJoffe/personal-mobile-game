@@ -10,8 +10,6 @@ public class Player : MonoBehaviour
      public float runSpeed = 3.5f, horizontalRotateSpeed = 100f, verticalRotateSpeed = 50f;
      Vector3 rot;
     bool isPC;
-    bool canshoot;
-    public float shootTimer;
     public float health;
     public float moveSpeed = 2f;
     Vector2 screen;
@@ -36,26 +34,15 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {  
         if (isPC == true)
         {
-            MovePC();
-
-            if (shootTimer <= .5f)
-            {
-                 shootTimer += Time.deltaTime;
-            }
-      
-            if (shootTimer > .5f )
-            {
-                gunPC();
-            }
+            MovePC();        
+            gunPC();      
         }
         if (isPC == false)
         {
-            movePhone();
-           
+            movePhone();         
         }
     }
     #region movement
@@ -99,7 +86,7 @@ public class Player : MonoBehaviour
 
 
         // fire bullet from gun 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             // instantiate clone at barrel position
             Vector3 endOfBarrel = transform.forward * .5f;
@@ -108,7 +95,7 @@ public class Player : MonoBehaviour
             var bulletray = mainCam.ScreenPointToRay(new Vector3(x, y, 0));
             //clone speed and direction
             clone.velocity = bulletray.direction * 40;
-            shootTimer = 0; // put new stuff above here so it actually runs dickhed          
+               
         }
     }
     #endregion
@@ -125,7 +112,7 @@ public class Player : MonoBehaviour
             var bulletray = mainCam.ScreenPointToRay(new Vector3(x, y, 0));
             //clone speed and direction
             clone.velocity = bulletray.direction * 40;
-            shootTimer = 0; // put new stuff above here so it actually runs dickhed     
+             
            
     }
     private void OnDrawGizmos()
