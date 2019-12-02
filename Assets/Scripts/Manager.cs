@@ -15,12 +15,12 @@ public class Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (cursorHidden)
-        {
-            //locks cursor and toggles visible
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        // if (cursorHidden)
+        // {
+        //     //locks cursor and toggles visible
+        //     Cursor.lockState = CursorLockMode.Locked;
+        //     Cursor.visible = false;
+        // }
         health = GameObject.Find("Health").GetComponent<Text>();
         round = GameObject.Find("Round").GetComponent<Text>();
         Mobile = GameObject.Find("MobileUI");
@@ -29,7 +29,7 @@ public class Manager : MonoBehaviour
         {
             Mobile.SetActive(true);
         }
-        else { Mobile.SetActive(false); }
+     //   else { Mobile.SetActive(false); }
     }
 
     // Update is called once per frame
@@ -37,19 +37,19 @@ public class Manager : MonoBehaviour
     {
         health.text = player.health.ToString();
         round.text = enemy.deathcounter.ToString();
-        if (!Application.isMobilePlatform)
-        {
-            if (player.health <= 0)
-            {
-                Cursor.lockState = CursorLockMode.Confined;
-                Cursor.visible = true;
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-            }
-        }
+        // if (!Application.isMobilePlatform)
+        // {
+        //     if (player.health <= 0)
+        //     {
+        //         Cursor.lockState = CursorLockMode.Confined;
+        //         Cursor.visible = true;
+        //     }
+        //     else
+        //     {
+        //         Cursor.lockState = CursorLockMode.Locked;
+        //         Cursor.visible = false;
+        //     }
+        // }
         if (player.health <= 0)
         {            
             deadPanel.SetActive(true);
