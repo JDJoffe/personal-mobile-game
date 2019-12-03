@@ -8,8 +8,9 @@ public class Player : MonoBehaviour
     public JoyStick movementJoystick;
      public float runSpeed = 3.5f, horizontalRotateSpeed = 100f, verticalRotateSpeed = 50f;
      Vector3 rot;
-    bool isPC;
+    public bool isPC;
     public float health;
+    public float rotateSpeed = 1f;
     public float moveSpeed = 2f;
     Vector2 screen;
     [Header("Objects")]
@@ -24,11 +25,11 @@ public class Player : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         barrel = GameObject.Find("barrel");
         player = GetComponent<CharacterController>();
-        if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
-        {
+       if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
+       {
             isPC = true;
-        }
-        else { isPC = false; }
+       }
+       else { isPC = false; }
     }
 
     // Update is called once per frame
@@ -41,8 +42,8 @@ public class Player : MonoBehaviour
         }
         if (isPC == false)
         {
-            movePhone();         
-        }
+           movePhone();
+       }
     }
     #region movement
     private void MovePC()
@@ -60,10 +61,8 @@ public class Player : MonoBehaviour
     }
     void movePhone()
     {
+        
         transform.position += transform.TransformDirection(new Vector3(movementJoystick.Horizontal, 0f, movementJoystick.Vertical) * runSpeed * Time.deltaTime);
-        //transform.rotation *= Quaternion.Euler(0f , movementJoystick.Horizontal * rotateSpeed * Time.deltaTime, 0f);
-        transform.rotation = Quaternion.Euler(0f, rot.y, 0f);
-        //cam.transform.localRotation = Quaternion.Euler(rot.x, 0f, 0f);
     }
     #endregion
     #region gun
